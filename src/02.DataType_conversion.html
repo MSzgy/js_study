@@ -47,6 +47,27 @@
       var d = "789ss";
       alert(parseInt(d) + "  " + typeof parseInt(d));
 
+
+      /*
+        other type ---> Boolean
+            - Number ---> Boolean
+                return true other than 0 or NaN
+            - String ---> Boolean
+                return true other than ""(empty string)
+            - null/undefined ---> Boolean
+                return false
+            - Object ---> Boolean
+                return true
+       */
+      var e = 123;
+      alert(Boolean(e) + "  ");
+
+      var f = "";
+      alert(Boolean(f));
+
+      var g = null;
+      alert(Boolean(g));
+
     </script>
 </head>
 <body>
