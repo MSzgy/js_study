@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08.Object</title>
+    <script>
+      /**
+       * use 'new' to construct an object
+       * @type {Object}
+       */
+      var obj = new Object();
+      // alert(obj);
+      console.log(obj);
+
+      /**
+       * the value in an object is called property
+       * grammar: obj.propertyName = value;
+       */
+      obj.name = "zgy";
+      obj.gender = "male";
+
+      /**
+       * read the property value
+       */
+      console.log(obj.name);
+
+      /**
+       * delete the obj property
+       */
+      delete obj.gender;
+      console.log(obj.gender);
+
+      /**
+       * can also use [] to define a variable
+       */
+      obj['age'] = 26;
+
+
+      /**
+       * The second method to create an object
+       */
+      var obj2 = {
+          name: "ltf",
+          age: "26",
+          gender: "female"
+      };
+      console.log(obj2);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

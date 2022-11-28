@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>09.Function</title>
+    <script>
+      /**
+       * function()
+       *    is also an object
+       *
+       */
+        // var fun = new Function("console.log('Hello 这是我的第一个函数);");
+
+      /**
+       * use function declaration to create a function
+       *    function 'function_name' ([...]) {
+       *        
+       *    }
+       */
+      function fun2() {
+          console.log("second function");
+      }
+      fun2();
+
+      /**
+       * var functionName = function([....]) {
+       *
+       * }
+       */
+      var fun3 = function () {
+          console.log("fun3");
+      }
+      fun3();
+
+      /**
+       * function is also an object
+       */
+      function fun(a) {
+          console.log("a = " + a);
+          a();
+      }
+      fun(fun3);
+
+      /**
+       * function inside a function
+       */
+      function fun4() {
+          function fun5() {
+              alert("function 4");
+          }
+          return fun5;
+      }
+      var a = fun4();
+      console.log(a);
+
+      /**
+       *
+       */
+      (function() {
+          console.log("I am a nested function");
+      })();
+
+      (function(a, b) {
+          console.log("a = " + a);
+          console.log("b = " + b);
+      })(100, 200);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

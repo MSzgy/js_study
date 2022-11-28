@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>02数据类型转换</title>
     <script>
-      /*
+      /**
         将其他数据类型转为String
         方式一：
           - 调用被转换数据类型的toString()方法
@@ -12,7 +12,7 @@
       var a = 123;
       alert(a.toString() + " " + typeof a.toString());
 
-      /*
+      /**
         方式二：
           - 调用String函数,将要转换的数据作为参数传入
           - when use String(), call the toString() method for Number type and Boolean
@@ -23,7 +23,7 @@
       alert(sb + " " + typeof sb);
 
 
-      /*
+      /**
         convert other type to Number type
           - use Number() function
           - String ---> Number
@@ -40,7 +40,7 @@
       var c = "789ss";
       alert(Number(c) + "  " + typeof Number(c));
 
-      /*
+      /**
         only for String ---> Number
         - parseInt()、parseFloat()
        */
@@ -48,7 +48,7 @@
       alert(parseInt(d) + "  " + typeof parseInt(d));
 
 
-      /*
+      /**
         other type ---> Boolean
             - Number ---> Boolean
                 return true other than 0 or NaN
