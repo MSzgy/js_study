@@ -13,6 +13,31 @@
       }
       obj.sayName();
 
+      /**
+       * create an object using factory method
+       */
+       function createPerson(name, age) {
+          var obj = new Object();
+
+          obj.name = name;
+          obj.age = age;
+          obj.sayName = function () {
+              alert(this.name + " " + this.age);
+          }
+          obj.sayName();
+          return obj;
+      }
+      var obj2 = createPerson("zgy", 26);
+      var obj3 = createPerson("ltf", 26);
+
+      /**
+       * create a constructor function to create the Person object
+       */
+      function Person() {
+
+      }
+      var per = new Person();
+      console.log(per);
     </script>
 </head>
 <body>
