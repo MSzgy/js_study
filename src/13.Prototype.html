@@ -9,17 +9,30 @@
         /**
          * Prototype
          * 
-         * when create a function object, also create a prototype object (protoObj). 
+         * when create a function object, also create a prototype object (protoObj).
          * 
-         * when obj = new Class(), the obj can also has a property pointing to the protoObj.
+         * when obj = new Class(), the obj can also have a property pointing to the protoObj.
          */
         function Person() {
             this.name = "zgy";
+            this.age = 26;
         }
         Person.prototype.age = 26;
         console.log(Person.prototype);
-        var per = new Person();
+          var per = new Person();
+        // when we access a variable, first find in object, if not, then find in the
+        // protoObj
         console.log(per.age);
+        console.log(per.hasOwnProperty("name")); // return true
+
+        /**
+         * override toString() method
+         */
+        Person.prototype.toString = function () {
+            return this.name + " " + this.age;
+        }
+        var per1 = new Person();
+        console.log(per1.toString());
     </script>
 </head>
 <body>
