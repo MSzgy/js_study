@@ -31,16 +31,20 @@
       var obj3 = createPerson("ltf", 26);
 
       /**
+       * class 
        * create a constructor function to create the Person object
        */
       function Person() {
-
+        this.name = "zgyy",
+        this.age = 26,
+        this.sayName = function() {
+          alert(this.name);
+        };
       }
+      
       var per = new Person();
       console.log(per);
     </script>
 </head>
-<body>
-
-</body>
+<body></body>
 </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13.Prototype</title>
+    <script>
+        /**
+         * Prototype
+         * 
+         * when create a function object, also create a prototype object (protoObj). 
+         * 
+         * when obj = new Class(), the obj can also has a property pointing to the protoObj.
+         */
+        function Person() {
+            this.name = "zgy";
+        }
+        Person.prototype.age = 26;
+        console.log(Person.prototype);
+        var per = new Person();
+        console.log(per.age);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
