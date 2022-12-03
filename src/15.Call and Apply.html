@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15.Call and Apply</title>
+    <script>
+      function fun() {
+        alert(this.name);
+      }
+
+      /**
+       * Call Apply
+       *    - this two method are both the method of function object
+       *    - call the function to execute
+       *    - can assign the object to be the first parameter,
+       *      the assigned parameter will be the 'this'.
+       *    - apply() method needs to wrap its arguments in an array and pass them around.
+       */
+      fun.call();
+
+      var obj = {
+          name: "zgy",
+          sayName: function () {
+            alert(this.name);
+          }
+      };
+
+      var obj2 = {
+          name: "test"
+      }
+      fun.apply(obj);
+      obj.sayName.apply(obj2);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

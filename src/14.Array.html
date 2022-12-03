@@ -22,6 +22,38 @@
       var arr1 = [1, 2, 3, 4, 5];
       console.log(arr1);
 
+      // push method
+      arr.push("a", 'b', 'c', 'd');
+
+      // pop method
+      let pop = arr.pop();
+
+      // for each
+      arr.forEach(function (a, b, c) {
+         console.log(a + " " + b + " " + c);
+      });
+
+      // slice
+      arr.slice();
+
+      // splice
+      let splice = arr.splice(0, 1);
+      console.log(arr);
+
+      // concat()
+      let concat = arr.concat(arr1);
+      console.log(concat);
+
+      // join()
+      let s = arr.join();
+      console.log(s);
+
+      // sort
+      arr.sort(function (a, b) {
+          console.log(b.charAt(0) + " " + a.charAt(0));;
+      })
+      console.log(arr);
+
     </script>
 </head>
 <body>
