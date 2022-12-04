@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>20.Reger</title>
+    <script>
+      /**
+       * RexExp()
+       */
+      var reg = new RegExp();
+
+      /**
+       * var variable = /reg expression/match_pattern
+       */
+      reg = /a/i;     // contains a and ignore the lower or upper
+
+      reg = /ab/;     // contains ab
+
+      reg = /a|b/;    // contains a or b
+
+      reg = /[ab]/;  // the expression in '[]' is the relationship of or
+
+      reg = /[a-z]/;
+
+      reg = /a[bde]c/;  // abc adc aec
+
+      reg = /[^ab]/;    // except ab
+
+      reg = /[^0-9]/    // except number
+
+
+      /**
+       * String and RegExp
+       */
+      var str = "1a2b3c4d5e6f7g";
+
+      let regExpMatchArrays = str.match(/[A-z]/g);
+      console.log(regExpMatchArrays);
+
+      /**
+       *  count the number of occurrence
+       *    - {n} occurrence of n
+       *    - {m, n} occurrence from m to n
+       *    - {m, } occurrence above m
+       *    - + occurrence at least 1, equals to {1,}
+       *    - * occurrence >= 0, equals to {0,}
+       *    - ? occurrence of 0 or 1, equals to {0,1}
+       */
+      reg = /a{3}/;
+      console.log(reg.test("aaaabc"));
+
+      reg = /(ab){1,3}/;
+      console.log(reg.test("ababab"));
+
+      /**
+       * Start with a character or end with a character
+       *    ^ : start with a character
+       *    $ : end with a character
+       */
+      reg = /^a/;
+      console.log(reg.test("add"));
+
+      reg = /$a/;
+      console.log(reg.test("dsadafa"));
+
+      reg = /^a$/;
+      console.log(reg.test("abcda"));
+
+      /**
+       * define the phone number
+       */
+      var phoneReg = /^1[3-9][0-9]{9}$/
+      console.log(phoneReg.test("13897652389"));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
