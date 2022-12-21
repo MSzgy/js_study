@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>25.exercise</title>
+    <script type="text/javascript">
+      window.onload = function () {
+        var items = document.getElementsByName("items");
+        /**
+         * 全选
+         */
+        var checkedbtn = document.getElementById("checkedAllbtn");
+        checkedbtn.onclick = function () {
+          for (var i = 0; i < items.length; i++) {
+            items[i].checked = true;
+          }
+        };
+        /**
+         * 全不选
+         */
+        var checkedbtn = document.getElementById("checkedNobtn");
+        checkedbtn.onclick = function () {
+          for (var i = 0; i < items.length; i++) {
+            items[i].checked = false;
+          }
+        };
+        /**
+         * 反选
+         */
+        var checkedbtn = document.getElementById("checkedRevbtn");
+        checkedbtn.onclick = function () {
+          for (var i = 0; i < items.length; i++) {
+            items[i].checked = !items[i].checked;
+          }
+        };
+        /**
+         * 发送
+         */
+        var postbtn = document.getElementById("sendbtn");
+        postbtn.onclick = function () {
+          for (var i = 0; i < items.length; i++) {
+            items[i].checked ? alert(items[i].value) : "";
+          }
+        }
+      }
+    </script>
+</head>
+<body>
+  <form method="post" action="">
+    What is your favorite hobby ? <input type="checkbox" id="checkAllBox"/> 全选/全不选
+    <br/>
+    <input type="checkbox" name="items" value="football"/>足球
+    <input type="checkbox" name="items" value="basketball"/>篮球
+    <input type="checkbox" name="items" value="badminton"/>羽毛球
+    <input type="checkbox" name="items" value="pinpon"/>乒乓球
+    <br/>
+    <input type="button" id="checkedAllbtn" value="all"/>
+    <input type="button" id="checkedNobtn" value="no"/>
+    <input type="button" id="checkedRevbtn" value="reverse"/>
+    <input type="button" id="sendbtn" value="post">
+  </form>
+</body>
+</html>

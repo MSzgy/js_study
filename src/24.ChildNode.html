@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>24.ChildNode</title>
+    <script>
+
+    </script>
+</head>
+<body>
+  <button id="btn">button01</button>
+  <script>
+    let btn = document.getElementById("btn");
+    btn.onclick = function () {
+      var city = document.getElementById("city");
+      let elementsByTagName = city.getElementsByTagName("li");
+      console.log(elementsByTagName.length);
+      console.log("child nodes");
+      var cns = city.childNodes;
+      for (var i = 0; i < cns.length; i++) {
+        console.log(cns[i].innerHTML);
+      }
+    }
+  </script>
+  <div id="total">
+        <div class="inner">
+          <p>
+            which city do you like ?
+            </p>
+
+          <ul id="city">test
+            <li id="bj">Beijing</li>
+            <li id="SH">ShangHai</li>
+            <li>Tokyo</li>
+            <li>Seoul</li>
+          </ul>
+
+          <br>
+          <br>
+
+          <p>
+            which game do you like ?
+          </p>
+        </div>
+  </div>
+</body>
+</html>

@@ -36,8 +36,7 @@
 
       let regExpMatchArrays = str.match(/[A-z]/g);
       console.log(regExpMatchArrays);
-
-      /**
+       /**
        *  count the number of occurrence
        *    - {n} occurrence of n
        *    - {m, n} occurrence from m to n
@@ -45,6 +44,7 @@
        *    - + occurrence at least 1, equals to {1,}
        *    - * occurrence >= 0, equals to {0,}
        *    - ? occurrence of 0 or 1, equals to {0,1}
+       *    - . represents arbitrary character
        */
       reg = /a{3}/;
       console.log(reg.test("aaaabc"));
@@ -71,6 +71,24 @@
        */
       var phoneReg = /^1[3-9][0-9]{9}$/
       console.log(phoneReg.test("13897652389"));
+
+      /**
+       * RegRxp()
+       */
+      reg = new RegExp("\\\\");
+      console.log(reg);
+      console.log(reg.test("\\\\"));
+
+      /**
+       * \w : arbitrary number and letter [A-z0-9_]
+       * \W : except number or letter [^A-z0-9_]
+       * \d : arbitrary number [0-9]
+       * \D : except number [^0-9]
+       * \s : blank space
+       * \S : except blank space
+       * \b :
+       * \B :
+       */
     </script>
 </head>
 <body>
