@@ -37,4 +37,6 @@ Object
 
  - 由开发人员自己创建的对象
 
-   
+# 原型链
+
+![prototypeChain](prototypeChain.png)

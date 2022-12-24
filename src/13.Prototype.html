@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>13.Prototype</title>
     <script>
+        console.log(Object);
         /**
          * Prototype
          * 
@@ -33,6 +34,17 @@
         }
         var per1 = new Person();
         console.log(per1.toString());
+
+        /**
+         *
+         */
+        function Fn() {
+        }
+        console.log(Fn.prototype);
+        var fn = new Fn();
+        console.log(fn.__proto__);
+        console.log(Fn.prototype === fn.__proto__);
+
     </script>
 </head>
 <body>
