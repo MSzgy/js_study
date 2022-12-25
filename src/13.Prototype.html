@@ -62,10 +62,25 @@
         console.log(Object.prototype.__proto__);
         console.log(Object.__proto__ === Function.prototype);
         console.log(Function.prototype.__proto__ === Object.prototype);
-        console.log(Function === Function.prototype.constructor);
+        console.log(Function.__proto__ === Function.prototype);
         console.log(typeof Object);
 
+        /**
+         * 函数的显示原型指向的对象：默认是空 Object 对象（但Object不满足）
+         */
+        console.log(Object.prototype);
+        console.log(Object.prototype instanceof Object);  // false
+        console.log(Function.prototype instanceof Object) // true
 
+        /**
+         * 所有函数都是Function的实例（包含Function）
+         */
+        console.log(Function.__proto__ === Function.prototype); // true
+
+        /**
+         * Object的原型对象是原型链尽头
+         */
+        console.log(Object.prototype.__proto__);  // null
     </script>
 </head>
 <body>
