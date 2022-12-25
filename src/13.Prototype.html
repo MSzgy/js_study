@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>13.Prototype</title>
     <script>
-        console.log(Object);
         /**
          * Prototype
          * 
@@ -18,9 +17,10 @@
             this.name = "zgy";
             this.age = 26;
         }
+
         Person.prototype.age = 26;
         console.log(Person.prototype);
-          var per = new Person();
+          var per = new Person( );
         // when we access a variable, first find in object, if not, then find in the
         // protoObj
         console.log(per.age);
@@ -44,6 +44,27 @@
         var fn = new Fn();
         console.log(fn.__proto__);
         console.log(Fn.prototype === fn.__proto__);
+
+        Object.prototype.constructor = function () {
+            console.log('aaaaaaa');
+        }
+        var obj = new Object();
+        obj.constructor();
+
+        var date = new Date();
+
+        /**
+         * Date、Function、Object原型关系
+         */
+        console.log(date.__proto__ === Date.prototype)  // true
+        console.log(Date.__proto__ === Function.prototype);
+        console.log(Date.prototype.__proto__ === Object.prototype);
+        console.log(Object.prototype.__proto__);
+        console.log(Object.__proto__ === Function.prototype);
+        console.log(Function.prototype.__proto__ === Object.prototype);
+        console.log(Function === Function.prototype.constructor);
+        console.log(typeof Object);
+
 
     </script>
 </head>

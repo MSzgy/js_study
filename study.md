@@ -40,3 +40,4 @@ Object
 # 原型链
 
 ![prototypeChain](prototypeChain.png)
+![prototypeChain](prototypeChain2.png)
