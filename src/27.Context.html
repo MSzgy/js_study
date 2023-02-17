@@ -29,6 +29,7 @@
    *    开始执行函数体代码
    *
    *
+   *
    */
   // 全局执行上下文
   console.log(a1, window.a1);
@@ -52,7 +53,28 @@
       console.log("a3");
     }
   }
-  fn(2,3 );
+  fn(2,3);
+
+  /**
+   * test
+   */
+  function a() {
+      console.log(a);
+  }
+  var a;
+  console.log(typeof a);   // function
+
+  if (!(b in window)) {
+      var b = 2;
+  }
+  console.log(b);   // undefined
+
+  var c = 3
+  function c(c) {
+      console.log(c)
+  }
+  c(2)  // c is not a function
+
 </script>
 </body>
 </html>

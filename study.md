@@ -16,16 +16,14 @@ Undefined
 
 Object
 
-
-
+ 
 # 对象
 
 ## 分类
 
 1 内建对象
-
-		- 由ES标准中定义的对象，在任何ES实现中都可以使用
-		- 例如Math String Number Boolean Function Object...
+- 由ES标准中定义的对象，在任何ES实现中都可以使用
+     - 例如Math String Number Boolean Function Object...
 
 2 宿主对象
 
