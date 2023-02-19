@@ -8,14 +8,27 @@
   <script type="text/javascript">
     // ES6之前没有块作用域概念
     var x = 10;
-    function fn() {
+    function fn(x) {
+        console.log(this);
         console.log(x);
     }
     function show(f) {
         var x = 20;
-        f();
+        f(this.x);
     }
     show(fn);
+
+    var obj = {
+        that: this,
+        x: 1,
+        fun2: function () {
+            // console.log(fun2) // return "fun2 is not defined" because of context is window in line 26
+            console.log(this)
+            console.log(this.that.x);
+            console.log(this.fun2) // ok
+        }
+    }
+    obj.fun2();
   </script>
 </body>
 </html>

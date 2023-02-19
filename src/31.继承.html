@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>31.继承</title>
+</head>
+<body>
+  <script type="text/javascript">
+      /**
+       * 通过 prototype 继承
+       * @constructor
+       */
+    function Supper() {
+      this.supProp = 'Supper property'
+    }
+    Supper.prototype.showSupperProp = function () {
+      console.log(this.supProp);
+    }
+
+    function Sub() {
+      this.subProp = 'Sub property'
+    }
+
+    // 子类型的原型为父类型的一个实例对象
+    Sub.prototype = new Supper();
+    // 让子类型的原型的constructor指向子类型
+    Sub.prototype.constructor = Sub;
+
+    var sub = new Sub();
+    sub.showSupperProp();
+
+    /**
+    * 通过 call() 继承
+    */
+     var Person = function (name, age) {
+         this.name = name;
+         this.age = age;
+    }
+
+    var Student = function (name, age, price) {
+         Person.call(name, age);  // 为了得到属性，相当于 this.Person(name, age)
+         this.price = price;
+    }
+
+    /**
+    *  组合继承，集合上面两种继承方式
+     *      结合上面这种方式，再进行扩展
+    */
+    Student.prototype = new Person();
+    Student.prototype.constructor = Student;
+    Student.prototype.setPrice = function (price) {
+        this.price = price;
+    }
+
+
+
+
+  </script>
+</body>
+</html>
