@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>34.Web_Workers</title>
+</head>
+<body>
+    <input id="number" type="text" placeholder="数值">
+    <button id="btn">计算</button>
+  <script type="text/javascript">
+      // 1 1 2 3 5 8 13 21
+      function fibonacci(n) {
+          return n <= 2 ? 1 : fibonacci(n - 1) + fibonacci(n - 2)
+      }
+      var input = document.getElementById('number');
+      document.getElementById('btn').onclick = function () {
+
+          // 创建一个worker对象
+          var worker = new Worker("worker.js");
+
+          // 绑定接收消息的监听
+          worker.onmessage = function (event) {
+              alert(event.data);
+          }
+          // 接收worker传过来的数据函数
+          worker.postMessage(input.value);
+          console.log("send data");
+
+      }
+
+  </script>
+</body>
+</html>
