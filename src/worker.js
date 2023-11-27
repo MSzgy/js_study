@@ -8,6 +8,14 @@ var onmessage = function (event) {
     postMessage(result);
 }
 
+function fn(a) {
+    a = a + 1;
+}
+
+var a = 1;
+fn(a);
+console.log(a);
+
 // Path: src/index.js
 var worker = new Worker('worker.js');
 worker.postMessage(40);
