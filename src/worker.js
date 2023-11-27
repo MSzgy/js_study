@@ -7,3 +7,10 @@ var onmessage = function (event) {
     var result = fibonacci(number);
     postMessage(result);
 }
+
+// Path: src/index.js
+var worker = new Worker('worker.js');
+worker.postMessage(40);
+worker.onmessage = function (event) {
+    console.log(event.data);
+}
