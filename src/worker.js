@@ -14,3 +14,5 @@ worker.postMessage(40);
 worker.onmessage = function (event) {
     console.log(event.data);
 }
+
+test__
