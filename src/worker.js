@@ -7,3 +7,11 @@ var onmessage = function (event) {
     var result = fibonacci(number);
     postMessage(result);
 }
+
+function fn(a) {
+    a = a + 1;
+}
+
+var a = 1;
+fn(a);
+console.log(a);
